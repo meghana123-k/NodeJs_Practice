@@ -13,3 +13,17 @@ export function createFile() {
     (err) => {},
   );
 }
+
+export function readFileFn() {
+  const result = fs.readFileSync("./contacts.txt", "utf-8");
+  console.log(result);
+}
+export function readFileAsync() {
+  fs.readFile("./contacts.txt", "utf-8", (err, result) => {
+    if (err) {
+      console.log(err);
+      return;
+    }
+    console.log(result);
+  });
+}
