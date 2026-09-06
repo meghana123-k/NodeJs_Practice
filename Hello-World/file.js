@@ -3,6 +3,7 @@ import fs from "fs";
 // Sync...
 export function createSyncFile() {
   fs.writeFileSync("./testSync.txt", "Hello Node JS! I'm Meghana...");
+  console.log("Created Sync file - testSync.txt");
 }
 
 // Async... - 3 parameters (filename, data, callback) (must)**
@@ -12,6 +13,7 @@ export function createFile() {
     "Hello Node JS! I'm Meghana... Practising Node JS",
     (err) => {},
   );
+  console.log("Created ASync file - test.txt");
 }
 
 export function readFileFn() {
@@ -26,4 +28,9 @@ export function readFileAsync() {
     }
     console.log(result);
   });
+}
+
+export function appendFileSyncFn() {
+  fs.appendFileSync("./testSync.txt", `\nHello World\n`);
+  console.log("Append \"Hello World\" in testSync.txt file..");
 }

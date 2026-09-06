@@ -12,10 +12,11 @@
 // console.log(sub(5, 2));
 
 import { add, sub } from "./math.js";
-import { createSyncFile, createFile, readFileFn, readFileAsync } from "./file.js";
+import { createSyncFile, createFile, readFileFn, readFileAsync, appendFileSyncFn } from "./file.js";
 console.log(add(20, 3));
 console.log(sub(22, 3));
 createSyncFile();
 createFile();
 readFileFn();
 readFileAsync();
+appendFileSyncFn();
