@@ -86,9 +86,19 @@ app
 app.post("/api/users", (req, res) => {
   // Create new users;
   const body = req.body;
+  if (
+    !body ||
+    !body.first_name ||
+    !body.last_name ||
+    !body.gender ||
+    !body.email ||
+    !body.job_title
+  ) {
+    return res.status(404).json({ error: "All fields required." });
+  }
   users.push({ id: users.length + 1, ...body });
   fs.writeFile("./MOCK_DATA.json", JSON.stringify(users), (err, data) => {
-    return res.json({ status: "success", id: users.length });
+    return res.status(200).json({ status: "success", id: users.length });
   });
 });
 app.listen(PORT, () => {
