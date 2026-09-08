@@ -11,7 +11,7 @@
     "id": 2,
     "first_name": "Nancee",
     "last_name": "Annett",
-    "email": "nannett1@booking.com",
+    "email": "changedemail@gmail.com",
     "gender": "Female",
     "job_title": "VP Accounting"
   },
@@ -7998,5 +7998,13 @@
     "email": "arankinerr@oakley.com",
     "gender": "Male",
     "job_title": "Legal Assistant"
+  },
+  {
+    "id": 1001,
+    "first_name": "Meghana",
+    "last_name": "Kothakonda",
+    "email": "kothakondameghana3@gmail.com",
+    "gender": "Female",
+    "job_title": "Software Developer"
   }
 ]
